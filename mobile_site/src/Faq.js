@@ -5,6 +5,7 @@ import "./Main.css";
 import { useState, useEffect } from "react";
 import React from 'react';
 import { Link } from "react-router-dom";
+import Faq from "react-faq-component";
 // import instalogo from "./instalogo.png"
 // import facebooklogo from "./facebooklogo.png"
 // import twitterlogo from "./twitterlogo.png"
@@ -13,6 +14,50 @@ import { Link } from "react-router-dom";
 
 function About() {
 
+    const data = {
+        title: "FAQ (How it works)",
+        rows: [
+            {
+                title: "Lorem ipsum dolor sit amet,",
+                content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat,
+                  ultricies metus at, consequat velit. Curabitur est nibh, varius in tellus nec, mattis pulvinar metus.
+                  In maximus cursus lorem, nec laoreet velit eleifend vel. Ut aliquet mauris tortor, sed egestas libero interdum vitae.
+                  Fusce sed commodo purus, at tempus turpis.`,
+            },
+            {
+                title: "Nunc maximus, magna at ultricies elementum",
+                content:
+                    "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.",
+            },
+            {
+                title: "Curabitur laoreet, mauris vel blandit fringilla",
+                content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem.
+                Fusce tempor lacus ut libero posuere viverra. Nunc velit dolor, tincidunt at varius vel, laoreet vel quam.
+                Sed dolor urna, lobortis in arcu auctor, tincidunt mattis ante. Vivamus venenatis ultricies nibh in volutpat.
+                Cras eu metus quis leo vestibulum feugiat nec sagittis lacus.Mauris vulputate arcu sed massa euismod dignissim. `,
+            },
+            {
+                title: "What is the package version",
+                content: <p>current version is 1.2.1</p>,
+            },
+        ],
+    };
+
+    const styles = {
+        // bgColor: 'white',
+        titleTextColor: "black",
+        // titlePaddingLeft: "5px",
+        rowTitleColor: "grey",
+        // padding-left: "30px",
+        rowContentPaddingLeft: '50px',
+        // arrowColor: "red",
+    };
+
+    const config = {
+        // animate: true,
+        // arrowIcon: "V",
+        // tabFocus: true
+    };
 
     return (
         <div className="mainpage">
@@ -51,18 +96,12 @@ function About() {
 
                 </div>
             </nav>
-            <div className="contactarea">
-                <div className="delivaryimg">
-                    <img src="https://www.pngmart.com/files/21/Food-Delivery-Scooter-PNG-HD-Isolated.png" alt="Delivery Boy" />
-                </div>
-                <div className="aboutext">
-                    <div className="text-center"><b>About us</b></div>
-                    <div>Ecommerce is the buying and seldivng of goods and services over the Internet.</div>
-                    <div>It is conducted over computers, tablets, smartphones, and other smart devices.</div>
-                    <div>Almost anything can be purchased through ecommerce today; for this reason, ecommerce is often highly competitive.</div>
-                    <div>It can be a substitute for brick-and-mortar stores, though some businesses choose to maintain both.</div>
-                    <div>Ecommerce operates in several market segments including business-to-business, business-to-consumer, consumer-to-consumer, and consumer-to-business.</div>
-                </div>
+            <div className="faqarea">
+                <Faq className="faqtext"
+                    data={data}
+                    styles={styles}
+                    config={config}
+                />
             </div>
             <footer>
                 <div className="footer">

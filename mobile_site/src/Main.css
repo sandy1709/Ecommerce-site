@@ -11,9 +11,6 @@ nav ul li {
     /* margin: -1% -1% 1% -1%; */
 }
 
-#navlogot{
-    text-decoration: none;
-}
 nav ul li a {
     color: rgb(12, 11, 11);
     text-decoration: none;
@@ -49,6 +46,15 @@ span {
     align-items: center;
     justify-content: space-between;
     background-color: beige;
+    height: 90px
+}
+
+Link {
+    text-decoration: none;
+}
+.shopnav {
+    background-color: beige;
+    height: 80px;
 }
 .space {
     width: cover;
@@ -183,11 +189,23 @@ h1 {
     background-color: ivory;
 }
 
+.faq {
+    height: 350px;
+    background-color: ivory;
+    padding-left: 30px;
+
+}
+
+.faqtext {
+    padding-left: 30px;
+}
+
 .contactarea {
     color: black;
     display: flex;
     flex-direction: row;
 }
+
 
 .unorderedlist {
     list-style: none;
@@ -209,4 +227,15 @@ h1 {
 
 .mobiletitle {
     color: black;
+}
+
+.aboutext {
+    font-size: 17px;
+    line-height: 25px;
+    font-style: ubuntu;
+    padding-top: 30px;
+}
+
+.shoppagedata {
+    background-color:aliceblue;
 }

@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 // import twitterlogo from "./twitterlogo.png"
 
 
-function Main() {
+function Shop() {
 
     const [data, setData] = useState([]);
 
@@ -57,7 +57,6 @@ function Main() {
 
     let MobileData = "";
     MobileData = data.map((phonedetails, i) => {
-        if (i < 4) {
             console.log(phonedetails);
             return (<div className="mobilecard" >
                 <div>
@@ -70,23 +69,20 @@ function Main() {
                     <div class="price">Price : {phonedetails.B}</div>
                 </Link>
             </div>)
-        }
     })
 
     return (
         <div className="mainpage">
-            <nav className="mainpage-nav">
+            <nav className="mainpage-nav shopnavbar">
 
-                <div className="nav">
-                    <Link to="/" style={{ textDecoration: 'none' }} >
-                        <h2 id="navlogot">
-                            Z<span id="name">-Mobiles </span>
+                <div className="nav shopnav">
+                    <Link to="/">
+                        <h2 id="navlogot" style={{textDecoration: 'none'}}>
+                            Z<span id="name">-mobiles </span>
                         </h2>
                     </Link>
                     <ul>
-                        <li><Link to="/shop">
-                            <a href="#">Shop</a>
-                        </Link></li>
+                        <li><a href="#">Shop</a></li>
                         <li><Link to="/about">
                             <a href="#">About</a>
                         </Link></li>
@@ -106,17 +102,9 @@ function Main() {
 
                 </div>
             </nav>
-
-            <div className="space">
-                <div>
-                    <h3 className="headertext">Welcome to z-mobiles </h3>
-                    <p className="headertext">This is an E-Commerce Mobile App. Here, you can buy the products, And You can sell Products here...</p>
-                </div>
-
-            </div>
-            <section id="mainpagedata">
+            <section id="mainpagedata shoppagedata">
                 <h1 className="ourtext">Our<span className="worldtext"> World</span></h1>
-                <div className="wrap">
+                <div className="wrap wrappagedata">
                     {MobileData}
                 </div>
             </section>
@@ -145,5 +133,5 @@ function Main() {
     )
 }
 
-export default Main;
+export default Shop;
 

@@ -8,30 +8,27 @@ class UpdateproductController < ActionController::Base
         cid = params[:cid]
         cname = params[:cname]
         uid = params[:uid]
-        pdet = params[:pdetails]
         likes = params[:likes]
         product = Product.find_by(product_id: pid)
-        product.update(product_id: pid, 
-            product_name: pname, 
-            product_type: ptype, 
-            company_id: cid, 
-            company_name: cname, 
-            user_id: uid,
-            product_details: pdet, 
-            likes: likes,
-            A : params[:A],
-            B : params[:B],
-            C : params[:C],
-            D : params[:D],
-            E : params[:E],
-            F : params[:F],
-            G : params[:G],
-            H : params[:H],
-            I : params[:I],
-            J : params[:J],
-            K : params[:K],
-            L : params[:L],
-        )
-        render :json : Product
+        product.product_name = pname
+        product.product_type = ptype 
+        product.company_id = cid 
+        product.company_name = cname 
+        product.user_id = uid
+        product.likes = likes
+        product.A  = params[:A]
+        product.B  = params[:B]
+        product.C  = params[:C]
+        product.D  = params[:D]
+        product.E  = params[:E]
+        product.F  = params[:F]
+        product.G  = params[:G]
+        product.H  = params[:H]
+        product.I  = params[:I]
+        product.J  = params[:J]
+        product.K  = params[:K]
+        product.L  = params[:L]
+        product.save
+        render :json  => product
     end
 end

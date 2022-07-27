@@ -20,23 +20,30 @@ function Contact() {
 
                 <div className="nav">
                     <Link to="/">
-                        <h2 id="navlogot">
+                        <h2 id="navlogot" style={{textDecoration: 'none'}} >
                             Z<span id="name">-mobiles </span>
                         </h2>
                     </Link>
 
                     <ul>
 
-                        <li><a href="#">Shop</a></li>
-                        <li><Link to="/about">
-                            <a href="#">Aontact</a>
+                        <li><Link to="/shop">
+                            <a href="#">Shop</a>
                         </Link></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><Link to="/about">
+                            <a href="#">About</a>
+                        </Link></li>
+                        <li><Link to="/faq">
+                            <a href="#">FAQ</a>
+                        </Link></li>
                         <li>
                             <Link to="/contact">
                                 <a href="#">Contact</a>
                             </Link>
                         </li>
+                        <li><Link to="/add">
+                            <a href="#">Add</a>
+                        </Link></li>
                         <input type="text" id="header-search" placeholder="Search" name="s" />
                         <li><a href="#">signUp/Login</a></li>
                     </ul>

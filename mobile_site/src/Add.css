@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -14,29 +14,23 @@ nav li {
     background-color: rgb(247, 243, 243);
 }
 
-
-nav ul li a{
-    color:rgb(12, 11, 11);
+nav ul li a {
+    color: rgb(12, 11, 11);
     text-decoration: none;
     font-weight: bold;
-    text-transform:capitalize ;
+    text-transform: capitalize;
     text-align: end;
     list-style-type: none;
 }
 
-nav ul li a:hover{
-    color:rgb(205, 15, 15);
-    transition: .3s;
+nav ul li a:hover {
+    color: rgb(205, 15, 15);
+    transition: 0.3s;
 }
 
-#navlogot{
-    padding-bottom: 20px;
-    color:red;
-    font-size:40px;
-}
 
-#name{
-    color:rgb(13, 12, 12);
+#name {
+    color: rgb(13, 12, 12);
 }
 
 .navbar {
@@ -48,20 +42,20 @@ nav ul li a:hover{
 }
 
 .navsearch {
-    width:35%;
+    width: 35%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-.navlogo{
-    width:30%;
+.navlogo {
+    width: 30%;
     text-align: end;
 }
 
 .navmenu {
     padding-top: 20px;
-    width: 50%;
+    width: 60%;
     display: inline-block;
     justify-content: space-around;
 }
@@ -70,51 +64,130 @@ ul {
     display: inline-block;
 }
 
-input{
-    width:240px;
-    height:40px;
+input {
+    width: 240px;
+    height: 40px;
     border-radius: 50px;
     padding-left: 20px;
 }
 
-
 /* below is css for main body*/
-
-
 
 .headedata {
     /* display: table-cell; */
+    display: flex;
+    justify-content: center;
     vertical-align: top;
-    text-align:justify;
+    text-align: justify;
     padding-left: 150 px;
+    padding-top: 50px;
     border: 4px solid black;
     margin-top: 10px;
-    padding-bottom:80px;
-    background-color: rgb(3, 127, 193);
+    padding-bottom: 80px;
+    background-image: url(https://previews.123rf.com/images/whilerests/whilerests1508/whilerests150800017/43562224-modern-seamless-pattern-black-touchscreen-cellphone-tablet-smartphone-isolated-on-white-background-v.jpg);
+    background-size: 600px 400px;
 }
 
 .productdetails {
-    height : 100px;
+    height: 100px;
     width: 1000px;
-    border:2px solid black;
+    border: 2px solid black;
     border-radius: 20px;
-    padding:8px;
+    padding: 8px;
     /* color:black; */
-    
 }
-button{
-    width:120px;
-    height:35px;
+button {
+    width: 120px;
+    height: 35px;
     border-radius: 10px;
-    color:white;
+    color: white;
     background-color: black;
- 
 }
-button:hover{
-    transition: .3s;
-    color:brown;
+button:hover {
+    transition: 0.3s;
+    color: brown;
     background-color: transparent;
 }
+
+.details {
+    line-height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .addtext {
+    font-size: 20px;
+}
+
+.inputboxes {
+    /* padding: 100px; */
+    text-align: center;
+    line-height: 50px;
+    background-color: silver;
+    opacity: 0.95;
+    border-radius: 50px;
+    width: 500px;
     color: black;
 }
+
+/* .one {
+    position: relative;
+    left: 30px;
+    top: 50px;
+}
+
+.two {
+    position: relative;
+    left: 100px;
+    top: 200px;
+}
+
+.three {
+    position: relative;
+    left: 300px;
+    top: 100px;
+}
+
+.four {
+    position: relative;
+    left: 30px;
+    top: 100px;
+}
+
+.five {
+    position: relative;
+    left: 500px;
+    top: 100px;
+}
+
+.six {
+    position: relative;
+    left: 170px;
+    top: 100px;
+}
+
+
+.seven {
+    position: relative;
+    left: 600px;
+    top: 100px;
+}
+
+.eight {
+    position: relative;
+    left: 490px;
+    top: 100px;
+}
+
+.nine {
+    position: relative;
+    left: 150px;
+    top: 100px;
+}
+
+.ten {
+    position: relative;
+    left: 300px;
+    top: 100px;
+} */

@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
-import "./Update.css";
+import "./Add.css";
 
 import { useParams, Link } from "react-router-dom";
 import React from "react";
@@ -105,25 +105,26 @@ function Add() {
                     <div className="navbar">
                         <div className="navlogo">
                             <Link to="/">
-                                <h2 id="navlogot">
+                                <h2 id="navlogot" style={{textDecoration: 'none'}} >
                                     Z<span id="name">-mobiles </span>
                                 </h2>
                             </Link>
                         </div>
                         <div className="navmenu">
                             <ul>
-                                <li>
+                                <li><Link to="/shop">
                                     <a href="#">Shop</a>
-                                </li>
+                                </Link></li>
                                 <li><Link to="/about">
-                            <a href="#">Aontact</a>
-                        </Link></li>
-                                <li>
+                                    <a href="#">About</a>
+                                </Link></li>
+                                <li><Link to="/faq">
                                     <a href="#">FAQ</a>
-                                </li>
-                                <li>
+                                </Link></li>
+                                <li><Link to="/contact">
                                     <a href="#">Contact</a>
-                                </li>
+                                    </Link>
+                                </li> 
                             </ul>
                         </div>
                     </div>
@@ -144,146 +145,200 @@ function Add() {
             </nav>
 
             <div className="headedata">
-                <br /> <br />
-                <b className="addtext">Product Name :  </b>{" "}
-                <input value={pName} onChange={(e) => {
-                    setpName(e.target.value);
-                }}
-                    type="text" placeholder="Product Name" />
-                <br /> <br />
-                <b className="addtext">Company Name : </b>{" "}
-                <input value={cName} onChange={(e) => {
-                    setcName(e.target.value);
-                }}
-                    type="text" placeholder="Company Name"
-                />
-                <br /> <br />
-                <b className="addtext">Product Type : </b>{" "}
-                <input
-                    value={pType}
-                    onChange={(e) => {
-                        setpType(e.target.value);
+                {/* <i class="fa fa-headphones one"></i>
+                <i class="fa fa-headphones two"></i>
+                <i class="fa fa-headphones three"></i>
+                <i class="fa fa-headphones four"></i>
+                <i class="fa fa-headphones five"></i>
+                <i class="fa fa-headphones six"></i>
+                <i class="fa fa-headphones seven"></i>
+                <i class="fa fa-headphones eight"></i>
+                <i class="fa fa-headphones nine"></i>
+                <i class="fa fa-headphones ten"></i>
+                <i class="fa fa-phones eleven"></i>
+                <i class="fa fa-phones twelve"></i>
+                <i class="fa fa-phones thirteen"></i>
+                <i class="fa fa-phones fourteen"></i>
+                <i class="fa fa-phones fifteen"></i>
+                <i class="fa fa-phones sixteen"></i>
+                <i class="fa fa-phones seventeen"></i>
+                <i class="fa fa-phones eighteen"></i>
+                <i class="fa fa-phones nineten"></i>
+                <i class="fa fa-phones twenty"></i> */}
+                <div className="inputboxes">
+                    <b className="addtext">Enter your product data</b>
+                    <br />
+                    <b className="addtext">
+                        {/* Product Name :  */}
+                    </b>{" "}
+                    <input value={pName} onChange={(e) => {
+                        setpName(e.target.value);
                     }}
-                    type="text"
-                    placeholder="Product Type"
-                />
-                <br /> <br />
-                <b className="addtext">Product Details</b>
-                <br />
-                <b className="addtext">Price : </b>{" "}
-                <input
-                    value={B}
-                    onChange={(e) => {
-                        setB(e.target.value);
-                    }}
-                    type="text"
-                    placeholder="Price"
-                />
-                <br />
-                <b className="addtext">Ram : </b>{" "}
-                <input
-                    value={C}
-                    onChange={(e) => {
-                        setC(e.target.value);
-                    }}
-                    type="text"
-                    placeholder="Ram"
-                />
-                <br />
-                <b className="addtext">Memory : </b>{" "}
-                <input
-                    value={D}
-                    onChange={(e) => {
-                        setD(e.target.value);
-                    }}
-                    type="text"
-                    placeholder="Memory"
-                />
-                <br />
-                <b className="addtext">Processor : </b>{" "}
-                <input
-                    value={E}
-                    onChange={(e) => {
-                        setE(e.target.value);
-                    }}
-                    type="text"
-                    placeholder="Processor"
-                />
-                <br />
-                <b className="addtext">Battery: </b>{" "}
-                <input
-                    value={F}
-                    onChange={(e) => {
-                        setF(e.target.value);
-                    }}
-                    type="text"
-                    placeholder="Battery"
-                />
-                <br />
-                <b className="addtext">Rear Camera : </b>{" "}
-                <input
-                    value={G}
-                    onChange={(e) => {
-                        setG(e.target.value);
-                    }}
-                    type="text"
-                    placeholder="Rear camera"
-                />
-                <br />
-                <b className="addtext">Front Camera : </b>{" "}
-                <input
-                    value={H}
-                    onChange={(e) => {
-                        setH(e.target.value);
-                    }}
-                    type="text"
-                    placeholder="Front camera"
-                />
-                <br />
-                <b className="addtext">Warrenty : </b>{" "}
-                <input
-                    value={I}
-                    onChange={(e) => {
-                        setI(e.target.value);
-                    }}
-                    type="text"
-                    placeholder="Warrenty"
-                />
-                <br />
-                <b className="addtext">Os : </b>{" "}
-                <input
-                    value={J}
-                    onChange={(e) => {
-                        setJ(e.target.value);
-                    }}
-                    type="text"
-                    placeholder="OS"
-                />
-                <br />
-                <b className="addtext">Display : </b>{" "}
-                <input
-                    value={K}
-                    onChange={(e) => {
-                        setK(e.target.value);
-                    }}
-                    type="text"
-                    placeholder="Display"
-                />
-                <br />
-                <b className="addtext">Image link : </b>{" "}
-                <input
-                    value={L}
-                    onChange={(e) => {
-                        setL(e.target.value);
-                    }}
-                    type="text"
-                    placeholder="Image link"
-                />
-                <br /> <br />
-                <Link to={`/product/${PRODUCTID}`}>
+                        type="text"
+                        placeholder="Product Name"
+                    />
+                    <br />
+                    <b className="addtext">
+                        {/* Company Name : */}
+                    </b>{" "}
+                    <input
+                        value={cName}
+                        onChange={(e) => {
+                            setcName(e.target.value);
+                        }}
+                        type="text"
+                        placeholder="Company Name"
+                    />
+                    <br />
+                    <b className="addtext">
+                        {/* Product Type :  */}
+                    </b>{" "}
+                    <input
+                        value={pType}
+                        onChange={(e) => {
+                            setpType(e.target.value);
+                        }}
+                        type="text"
+                        placeholder="Product Type"
+                    />
+                    <br /> <br />
+                    <b className="addtext">Product Details</b>
+                    <br />
+                    <div className="details">
+
+                        <b className="addtext">
+                            {/* Price :  */}
+                            <input value={B} onChange={(e) => {
+                                setB(e.target.value);
+                            }}
+                                type="text" placeholder="Price"
+                            /></b>
+
+                        {/* <br /> */}
+                        <b className="addtext">
+                            {/* Ram : */}
+                            <input value={C} onChange={(e) => { setC(e.target.value); }}
+                                type="text"
+                                placeholder="Ram"
+                            /></b>{" "}
+
+
+                        {/* <br /> */}
+                        <b className="addtext">
+                            {/* Memory : */}
+                            <input
+                                value={D}
+                                onChange={(e) => {
+                                    setD(e.target.value);
+                                }}
+                                type="text"
+                                placeholder="Memory"
+                            /> </b>{" "}
+
+                        {/* <br /> */}
+                        <b className="addtext">
+                            {/* Processor : */}
+                            <input
+                                value={E}
+                                onChange={(e) => {
+                                    setE(e.target.value);
+                                }}
+                                type="text"
+                                placeholder="Processor"
+                            /> </b>{" "}
+
+                        {/* <br /> */}
+                        <b className="addtext">
+                            {/* Battery:  */}
+                            <input
+                                value={F}
+                                onChange={(e) => {
+                                    setF(e.target.value);
+                                }}
+                                type="text"
+                                placeholder="Battery"
+                            /></b>{" "}
+
+                        {/* <br /> */}
+                        <b className="addtext">
+                            {/* Rear Camera : */}
+                            <input
+                                value={G}
+                                onChange={(e) => {
+                                    setG(e.target.value);
+                                }}
+                                type="text"
+                                placeholder="Rear camera"
+                            /> </b>{" "}
+
+                        {/* <br /> */}
+                        <b className="addtext">
+                            {/* Front Camera : */}
+                            <input
+                                value={H}
+                                onChange={(e) => {
+                                    setH(e.target.value);
+                                }}
+                                type="text"
+                                placeholder="Front camera"
+                            /> </b>{" "}
+
+                        {/* <br /> */}
+                        <b className="addtext">
+                            {/* Warrenty : */}
+                            <input
+                                value={I}
+                                onChange={(e) => {
+                                    setI(e.target.value);
+                                }}
+                                type="text"
+                                placeholder="Warrenty"
+                            /> </b>{" "}
+
+                        {/* <br /> */}
+                        <b className="addtext">
+                            {/* Os : */}
+                            <input
+                                value={J}
+                                onChange={(e) => {
+                                    setJ(e.target.value);
+                                }}
+                                type="text"
+                                placeholder="OS"
+                            /> </b>{" "}
+
+                        {/* <br /> */}
+                        <b className="addtext">
+                            {/* Display :  */}
+                            <input
+                                value={K}
+                                onChange={(e) => {
+                                    setK(e.target.value);
+                                }}
+                                type="text"
+                                placeholder="Display"
+                            /></b>{" "}
+
+                        {/* <br /> */}
+                        <b className="addtext">
+                            {/* Image link : */}
+                            <input
+                                value={L}
+                                onChange={(e) => {
+                                    setL(e.target.value);
+                                }}
+                                type="text"
+                                placeholder="Image link"
+                            /> </b>{" "}
+
+                        <br /> <br />
+                    </div>
+                    <Link to={`/product/${PRODUCTID}`}>
                     <button onClick={Updateproduct}>Update Product</button>
                 </Link>
+                </div>
             </div>
+
             <div className="footer">
                 <div className="footer1">
                     <div className="f1">
@@ -304,7 +359,7 @@ function Add() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 

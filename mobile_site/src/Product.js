@@ -66,22 +66,22 @@ function Product() {
                     <div className="navbar">
                         <div className="navlogo">
                             <Link to="/">
-                                <h2 id="navlogot">
+                                <h2 id="navlogot" style={{textDecoration: 'none'}} >
                                     Z<span id="name">-mobiles </span>
                                 </h2>
                             </Link>
                         </div>
                         <div className="navmenu">
                             <ul>
-                                <li>
+                                <li><Link to="/shop">
                                     <a href="#">Shop</a>
-                                </li>
-                                <li><Link to="/about">
-                                    <a href="#">Aontact</a>
                                 </Link></li>
-                                <li>
+                                <li><Link to="/about">
+                                    <a href="#">About</a>
+                                </Link></li>
+                                <li><Link to="/faq">
                                     <a href="#">FAQ</a>
-                                </li>
+                                </Link></li>
                                 <li>
                                     <Link to="/contact">
                                         <a href="#">Contact</a>
